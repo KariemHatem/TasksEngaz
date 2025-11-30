@@ -11,5 +11,7 @@
   "cancel": "Cancel",
   "show-entries": "Show Entries",
   "previous": "Previous",
-  "next": "Next"
+  "next": "Next",
+  "delete": "Delete",
+  "edit": "Edit"
 }
