@@ -1,0 +1,37 @@
+<div class="add-post d-flex gap-3">
+  <!-- Avatar -->
+  <div class="avatar">
+    <img src="assets/images/user.png" alt=" user placeholder" class="ava-image-one" />
+    <img src="assets/images/logo__.png" alt=" user placeholder " class="ava-image-two" />
+  </div>
+  <!-- Text Area Publish post -->
+  <div class="input">
+    <span class="d-block mb-1">{{ 'write-post' | translate }}</span>
+    <div>
+      <textarea placeholder=" {{ 'write-post-holder' | translate }}" [(ngModel)]="text"></textarea>
+      <!-- preview of fiels uploaded -->
+      @if(files.length > 0){
+      <div class="d-flex flex-wrap mt-2 gap-2">
+        @for(f of files; track $index){
+        <img
+          class="rounded"
+          [src]="f"
+          alt="uploaded files"
+          [style]="{ width: '100px', height: '100px', objectFit: 'cover' }"
+        />
+        }
+      </div>
+      }
+    </div>
+    <!-- Buttons -->
+    <div class="buttons d-flex justify-content-between align-items-center mt-2">
+      <label class="btn border-0 btn-custom">
+        <i class="fa-solid fa-photo-film"></i> {{ 'upload-file' | translate }}
+        <input type="file" hidden multiple (change)="onFielSelected($event)" multiple />
+      </label>
+      <button class="btn border-0 btn-primary" (click)="publish()">
+        {{ 'publish-post-btn' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

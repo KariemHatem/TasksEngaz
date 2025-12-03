@@ -1,0 +1,23 @@
+.post-view .avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.post-view .avatar .ava-image-one {
+  max-width: 40px;
+  max-height: 35px;
+}
+.post-view .avatar .ava-image-two {
+  position: absolute;
+  max-width: 22px;
+  height: 20px;
+  top: 18px;
+  right: -2px;
+}
+.post-view .info {
+  max-width: 90%;
+}
+.post-view .info .right-side .whtsapp {
+  color: #25d366;
+}

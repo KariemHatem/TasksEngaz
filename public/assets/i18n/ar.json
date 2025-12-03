@@ -13,5 +13,15 @@
   "previous": "السابق",
   "next": "التالي",
   "delete": "حذف",
-  "edit": "تعديل"
+  "edit": "تعديل",
+  "timeline-heading": "الخط الزمني لإنجاز",
+  "company-timeline": "الخط الزمني للشركة",
+  "timeline-description": "هنا يمكنك اختيار الموظف المناسب ورفع السيرة الذاتية لشركتك العقارية",
+  "read-more": "اقرأ المزيد",
+  "write-post": "اكتب منشورًا",
+  "write-post-holder": "اكتب محتواك هنا",
+  "upload-file": "إرفاق صور/فيديوهات",
+  "publish-post-btn": "نشر المنشور",
+  "tabel": "الجدول",
+  "Engaz": "إنجاز"
 }

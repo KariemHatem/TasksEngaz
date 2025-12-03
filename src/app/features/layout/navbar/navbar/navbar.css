@@ -1,0 +1,11 @@
+.active-link {
+  color: rgb(143, 73, 209);
+  font-weight: 600;
+}
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+}
+.navbar-brand img {
+  height: 25px;
+}

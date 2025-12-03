@@ -13,5 +13,15 @@
   "previous": "Previous",
   "next": "Next",
   "delete": "Delete",
-  "edit": "Edit"
+  "edit": "Edit",
+  "timeline-heading": "Engaz Timeline",
+  "company-timeline": "Company Timeline",
+  "timeline-description": "Here you can choose the perfect employee and upload the CV for your real estate company",
+  "read-more": "Read More",
+  "write-post": "Write a Post",
+  "write-post-holder": "Write here your content",
+  "upload-file": "Attach photos/videos",
+  "publish-post-btn": "Publish Post",
+  "tabel": "Tabel",
+  "Engaz": "Engaz"
 }

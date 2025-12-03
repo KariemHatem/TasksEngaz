@@ -1,0 +1,53 @@
+<div class="post-view">
+  <!-- Loop through all posts -->
+  @for (post of posts$ | async; track $index) {
+
+  <div class="d-flex flex-wrap gap-3 p-2 bg-white rounded shadow-sm my-3">
+    <!-- Avatar -->
+    <div class="avatar">
+      <img src="assets/images/user.png" alt="user" class="ava-image-one" />
+      <img src="assets/images/logo__.png" alt="logo" class="ava-image-two" />
+    </div>
+
+    <!-- Name, Date, and Action Icons -->
+    <div class="info d-flex justify-content-between align-items-center w-100">
+      <div class="left-side d-flex flex-column">
+        <span>Kareem Hatem</span>
+        <small class="text-muted">
+          <p>{{ post.date | date : 'short' }}</p>
+        </small>
+      </div>
+
+      <!-- WhatsApp and Share Icons on the right -->
+      <div class="right-side d-flex gap-2">
+        <i class="fa-brands fa-whatsapp fa-lg whtsapp"></i>
+        <i class="fa-regular fa-share-from-square fa-lg text-black-50"></i>
+      </div>
+    </div>
+
+    <!-- Post Content -->
+    <div>
+      @if (post.files.length > 0) {
+      <div class="d-flex flex-wrap gap-2">
+        @for (f of post.files; track $index) {
+        <img
+          [src]="f"
+          [style]="{ width: '370px', height: '380px' }"
+          class="rounded"
+          alt="post view"
+        />
+        }
+      </div>
+      <p class="my-2">{{ post.text }}</p>
+      }
+
+      <!-- Post Actions -->
+      <div class="d-flex gap-2 align-items-center">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-regular fa-message"></i>
+        <span class="text-primary">{{ 'read-more' | translate }}</span>
+      </div>
+    </div>
+  </div>
+  }
+</div>

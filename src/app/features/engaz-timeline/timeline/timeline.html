@@ -1,0 +1,48 @@
+<div class="container mx-auto">
+  <!-- Head Title -->
+  <app-heading></app-heading>
+
+  <!-- Start Nav Tabs -->
+  <div class="tabs container">
+    <p-tabs class="custom-tabs">
+      <!-- TAB HEADERS -->
+      <p-tablist>
+        <!-- Engaz Timeline Tab Header -->
+        <p-tab value="0">
+          <div class="d-flex align-items-center gap-2 justify-content-center ms-4">
+            <p-avatar image="assets/images/Logomark.svg"></p-avatar>
+            <span class="font-bold white-space-nowrap m-0">{{
+              'timeline-heading' | translate
+            }}</span>
+            <p-badge value="2"></p-badge>
+          </div>
+        </p-tab>
+
+        <!-- Company Timeline Tab Header -->
+        <p-tab value="1">
+          <div class="d-flex align-items-center gap-2 justify-content-center me-4">
+            <p-avatar image="assets/images/sun.png"></p-avatar>
+            <span class="font-bold white-space-nowrap m-0">{{
+              'company-timeline' | translate
+            }}</span>
+          </div>
+        </p-tab>
+      </p-tablist>
+
+      <!-- TAB CONTENTS -->
+      <p-tabpanels>
+        <!-- Engaz Timeline Content -->
+        <p-tabpanel value="0">
+          <app-addtimeline-post></app-addtimeline-post>
+        </p-tabpanel>
+        <p-tabpanel value="0">
+          <app-post-view></app-post-view>
+        </p-tabpanel>
+        <!-- Company Timeline Content -->
+        <p-tabpanel value="1" class="p-3 bg-white rounded shadow-sm">
+          <!-- If you want content later, add here If you want content later, add here -->
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+  </div>
+</div>
