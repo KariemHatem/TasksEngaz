@@ -16,6 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
+import { DialogService } from 'primeng/dynamicdialog';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new (TranslateHttpLoader as any)(http, './assets/i18n/', '.json');
@@ -29,6 +30,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     ConfirmationService,
     ConfirmDialogModule,
+    DialogService,
     provideClientHydration(withEventReplay()),
     provideAnimations(),
     providePrimeNG({

@@ -60,3 +60,9 @@
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    gap: 1.125rem;
+  }
+}

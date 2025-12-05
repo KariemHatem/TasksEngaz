@@ -3,7 +3,6 @@ import { Component, inject } from '@angular/core';
 import { Region } from './../../../interfaces/regions/region';
 import { TranslatePipe } from '@ngx-translate/core';
 import { TableModule } from 'primeng/table';
-import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { SelectModule } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
@@ -11,23 +10,55 @@ import { DialogService, DynamicDialogModule, DynamicDialogRef } from 'primeng/dy
 import { FormDailog } from '../../dialog/form-dailog/form-dailog';
 import { ConfirmationService } from 'primeng/api';
 import { ConfirmDialog } from 'primeng/confirmdialog';
+import { HelpButton } from '../../need-help/need-help-button/help-button/help-button';
 @Component({
   selector: 'app-tabel',
   imports: [
     TableModule,
-    ButtonModule,
     CommonModule,
     SelectModule,
     FormsModule,
     DynamicDialogModule,
     TranslatePipe,
     ConfirmDialog,
+    HelpButton,
   ],
   templateUrl: './tabel.html',
   styleUrl: './tabel.css',
   providers: [DialogService, ConfirmationService],
 })
 export class Tabel {
+  // Help Videos
+  videos = [
+    {
+      title: 'Change the password of any account',
+      videoUrl: 'assets/videos/4-1Change the password of any account.webm',
+    },
+    {
+      title: 'Change the password for my account',
+      videoUrl: 'assets/videos/4-Change the password for my account.webm',
+    },
+    {
+      title: 'Add unit',
+      videoUrl: 'assets/videos/9-Add unit.webm',
+    },
+    {
+      title: 'How to prevent duplicates in the leades',
+      videoUrl: 'assets/videos/How to prevent duplicates in the leads.webm',
+    },
+    {
+      title: 'Import Unit',
+      videoUrl: 'assets/videos/Import Unit .mp4',
+    },
+    {
+      title: 'Edit User',
+      videoUrl: 'assets/videos/Edit USer.webm',
+    },
+    {
+      title: 'How to disable 2FA',
+      videoUrl: 'assets/videos/How to disable 2FA.webm',
+    },
+  ];
   // Reference to open dynamic dialog
   ref!: DynamicDialogRef;
   // Dialog Service
@@ -48,6 +79,7 @@ export class Tabel {
   openDialog(region?: Region) {
     this.ref = this.dialodService.open(FormDailog, {
       data: { region },
+      closable: true,
       width: '60vw',
       height: '100vh',
       modal: true,

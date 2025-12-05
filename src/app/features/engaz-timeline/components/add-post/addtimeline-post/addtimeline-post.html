@@ -29,9 +29,12 @@
         <i class="fa-solid fa-photo-film"></i> {{ 'upload-file' | translate }}
         <input type="file" hidden multiple (change)="onFielSelected($event)" multiple />
       </label>
-      <button class="btn border-0 btn-primary" (click)="publish()">
-        {{ 'publish-post-btn' | translate }}
-      </button>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <app-help-button [videos]="videos"></app-help-button>
+        <button class="btn border-0 btn-primary" (click)="publish()">
+          {{ 'publish-post-btn' | translate }}
+        </button>
+      </div>
     </div>
   </div>
 </div>

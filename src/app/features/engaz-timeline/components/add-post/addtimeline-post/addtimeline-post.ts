@@ -2,14 +2,27 @@ import { Component, inject } from '@angular/core';
 import { PostItems } from '../../../../../core/services/post-items/post-items';
 import { FormsModule } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
+import { HelpButton } from '../../../../../shared/components/need-help/need-help-button/help-button/help-button';
 
 @Component({
   selector: 'app-addtimeline-post',
-  imports: [FormsModule, TranslatePipe],
+  standalone: true,
+  imports: [FormsModule, TranslatePipe, HelpButton],
   templateUrl: './addtimeline-post.html',
   styleUrl: './addtimeline-post.css',
 })
 export class AddtimelinePost {
+  // Help Videos
+  videos = [
+    {
+      title: 'Add unit',
+      videoUrl: 'assets/videos/9-Add unit.webm',
+    },
+    {
+      title: 'How to prevent duplicates in the leades',
+      videoUrl: 'assets/videos/How to prevent duplicates in the leads.webm',
+    },
+  ];
   //hold text value
   text = '';
   // hold filess

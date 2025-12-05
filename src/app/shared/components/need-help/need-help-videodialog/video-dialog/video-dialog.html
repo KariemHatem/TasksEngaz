@@ -1,0 +1,9 @@
+<div class="video-dialog">
+  <div class="header">
+    <img src="assets/images/x.png" alt="Close" (click)="closeDilaog()" />
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="video-frame">
+    <video [src]="videoUrl" controls></video>
+  </div>
+</div>

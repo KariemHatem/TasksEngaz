@@ -3,9 +3,12 @@
     <!-- Header Section -->
     <div class="mb-1 mt-2 d-flex justify-content-between align-items-center p-3">
       <h2>{{ 'regions' | translate }}</h2>
-      <button class="btn border-0 text-white border btn-color" pButton (click)="openDialog()">
-        {{ 'region-btn' | translate }}
-      </button>
+      <div class="btns d-flex justify-content-center gap-2">
+        <app-help-button [videos]="videos"></app-help-button>
+        <button class="btn border-0 text-white border btn-color" (click)="openDialog()">
+          {{ 'region-btn' | translate }}
+        </button>
+      </div>
     </div>
     <!-- Start Tabel -->
     <p-table ngSkipHydration [value]="pagedRegions" [tableStyle]="{ width: '100%' }">
